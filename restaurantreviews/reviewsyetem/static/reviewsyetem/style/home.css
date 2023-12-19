@@ -1,0 +1,110 @@
+#category-banner {
+    width: 100%;
+    height: 300px;
+    background-color: #283618;
+    background-size: cover;
+    background-image: url('/static/reviewsyetem/img/background2.jpg');
+    transition: background 0.4s ease;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(10px); 
+
+
+}
+
+#category-banner:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease; 
+}
+
+
+.select-wrapper {
+    margin-top: 110px;
+    
+}
+
+#category-dropdown{
+    font-size: 26px;
+    border-radius: 50px;
+    padding: 15px 70px 15px 40px;
+    text-align-last:center;
+    border:none;
+    font-weight: bold;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	 -o-appearance: none;
+        appearance: none;
+        background: #fefae0;
+
+        
+}
+
+.select-wrapper span {
+	font-family: FontAwesome;
+  	content: '\f107';
+    font-size: 28px;
+    position: relative;
+    left: -50px;
+  	pointer-events: none;
+}
+.card-link {
+    color: black;
+    text-decoration: none;
+  
+    &:hover {
+        color: black;
+      text-decoration: none;
+      background-color: #dda15e;
+    }
+  }
+  
+
+.restaurant-card{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    color: black;
+    background-color: #fefae0;
+}
+
+.restaurant-card:hover{
+    border: 5px solid #fefae0;
+}
+
+
+.pricing{
+    color: #606c38;
+}
+
+
+.restaurant-image{
+    overflow: hidden; 
+    width: 300px; 
+    height:200px;
+}
+
+
+
+#restaurants-list-wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; 
+    background-color: #fefae0;
+}
+#restaurants-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: #fefae0;
+    padding-top:20px;
+}
+
+#restaurants-list .restaurant-card {
+    margin: 20px;
+}

@@ -1,0 +1,30 @@
+{% extends 'reviewsyetem/base.html' %}
+{% block content %}
+{% load static %} 
+<link rel="stylesheet" type="text/css" href="{% static 'reviewsyetem/style/login.css' %}">
+
+<div class="wrapper">
+    <div class="box">
+        <h2>Bon Appétit</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="inputBox">
+                {{ form.username }}
+                <label>Username</label>
+            </div>
+            <div class="inputBox">
+                {{ form.password1 }}
+                <label>Password</label>
+
+            </div>
+            <div class="inputBox">
+                {{ form.password2 }} 
+                <label>Confirm Password</label>
+
+            </div>
+            <button type="submit" id="submit">Register</button>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}

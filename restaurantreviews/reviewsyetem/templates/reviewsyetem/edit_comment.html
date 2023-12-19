@@ -1,0 +1,31 @@
+{% extends 'reviewsyetem/base.html' %}
+{% block content %}
+{% load static %}
+
+<div id="outer">
+    <div id="wrapper">
+        <a href="{% url 'details' restaurant_id=comment.restaurant_id %}" class="back-button">
+            <i class="fas fa-arrow-circle-left"></i>
+        </a>
+        <h1>Edit Your Comment</h1>
+        <br>
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="fieldWrapper">
+                <h6>Title of your comment</h6>
+                {{ form.title }}
+            </div><br>
+            <div class="fieldWrapper">
+                <h6>Your comment</h6>
+                {{ form.description }}
+            </div><br>
+            <input type="submit" value="Save Changes" class="btn btn-success" style="font-weight: 500; margin-bottom: 50px;background:#bc6c25;border:#bc6c25">
+            <br>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="{% static 'reviewsyetem/style/add_review.css' %}" />
+{% endblock %}
+  

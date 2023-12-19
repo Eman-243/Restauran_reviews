@@ -1,0 +1,124 @@
+body {
+    background-color: #283618;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url('/static/reviewsyetem/img/background2.jpg');
+    transition: background 0.4s ease;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(10px); 
+}
+
+
+
+.price {
+    background: #606c38; 
+    color: #fefae0;
+    border-radius: 50px;
+    padding: 6px 18px;
+    text-align: center;
+}
+
+
+#bootstrap-overrides .edit-delete-buttons { /* 100+1=101 priority score, yay! */
+    text-align: right !important;
+
+  }
+
+.custom-link, .delete-comment-btn {
+    text-decoration: none;
+    margin-left: 10px !important; /* Adjust the margin as needed for spacing between links */
+}
+
+.custom-link:hover, .delete-comment-btn:hover {
+    text-decoration: underline;
+}
+
+.review-liner-small{
+    margin: 0px 10px 0px 0px;
+    font-size: 15px;
+}
+
+#restaurant-summary{
+    padding: 10px;
+    background-color: #fefae0;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Georgia", Times, serif;
+    
+}
+
+.card{
+    border-radius: 20px;
+    background-color: #fefae0;
+
+}
+
+.user-icon{
+    font-size: 2em;
+
+}
+
+
+.date{
+    font-style: italic;
+    color:grey;
+}
+
+
+
+.user-bar{
+    display: table;
+}
+
+.user-icon-side{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+    
+}
+
+.review-meta-data{
+    font-size: 0.7em;
+}
+
+
+.col-11{
+    padding-left:5px;
+}
+
+.row-comment{
+    margin: 10px 0px 5px 0px;
+    
+}
+
+.comment-reply-username{
+    padding-right:10px;
+    font-weight: bold;
+}
+
+#add-review{
+    background: #283618; 
+    color: #ffffff;
+    border-radius: 50px;
+    color: #fefae0;
+}
+
+#add-review:hover{
+    background-color:#dda15e;
+}
+
+
+
+.category{
+    font-size: 1em;
+    padding: 10px 25px;
+    background: #606c38; 
+    font-weight: 400;
+    color: #fefae0;
+
+}

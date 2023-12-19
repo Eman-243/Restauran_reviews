@@ -1,0 +1,61 @@
+{% extends 'reviewsyetem/base.html' %}
+{% block content %}
+{% load static %}
+
+<div id="category-banner" class="text-center">
+    <div class="select-wrapper">
+        <form id="category-form" method="get" action="{% url 'home' %}">
+                <select name="category" id="category-dropdown">
+                    <option value="" {% if not selected_category %}selected{% endif %}>All Cuisines</option>
+                    {% for c in categories %}
+                        <option value="{{ c }}" {% if selected_category == c %}selected{% endif %}>{{ c }}</option>
+                    {% endfor %}
+                </select>
+                <span><i class="fas fa-chevron-circle-down"></i></span>
+        </form>
+    </div>
+</div>
+
+<!-- ERROR -->
+{% if not restaurants %}
+    <div id="none-found">
+        <div class="alert alert-primary" role="alert">
+            No restaurants found.
+        </div>
+    </div>
+{% endif %}
+
+<!-- RESTAURANTS LIST -->
+<div id="restaurants-list-wrapper">
+    <div id="restaurants-list">
+        {% for restaurant in restaurants %}
+            <div class="card restaurant-card shadow mb-4">
+                <div class="restaurant-image">
+                    <!-- Update this part based on your actual model fields -->
+                    <img class="card-img-top" src="{% static restaurant.img %}" alt="{{ restaurant.title }}" width="100%">
+                </div>
+                <a href="{% url 'details' restaurant.id %}" class="card-link">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ restaurant.title }}</h4>
+                        <span class="category">{{ restaurant.category }}</span>
+                        (<span class="comments-count">{{ restaurant.comment_count }}</span> comments)
+                    </div>
+                </a>
+                
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- CSS -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'reviewsyetem/style/home.css' %}" />
+
+<script>
+    document.getElementById('category-dropdown').addEventListener('change', function() {
+        document.getElementById('category-form').submit();
+    });
+</script>
+
+{% endblock %}
+

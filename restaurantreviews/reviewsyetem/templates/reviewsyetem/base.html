@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bon Appétit</title>
+
+    <!--CSS-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'reviewsyetem/style/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <main>
+        <nav class="navbar-foodie navbar navbar-expand-lg navbar-light" style="background-color: white; border: 2px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <a class="navbar-brand">
+                <img src="/static/reviewsyetem/img/logo.png" height="40px" >
+            </a>
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{% url 'home' %}">Home</a></li>
+            </ul>
+            <span class="navbar-text" style="margin-right:20px;color:black">Hello, {{user.username|default:'Guest'}}!</span>
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">
+                <button class="btn login" style="font-weight: 500; background-color: #606c38; color:white">Logout</button>
+            </a>
+        
+            {% else %}
+            <a href="{% url 'login' %}">
+                <button class="btn login" style="font-weight: 500; background-color: #606c38; color:white; margin-right:5px">Login</button>
+                <br>
+            </a>
+            <a href="{% url 'register' %}">
+                <button class="btn login" style="font-weight: 500; background-color: #606c38; color:white" >Register</button>
+            </a>
+            {% endif %}
+        </nav>
+        
+        {% block content %}
+        {% endblock %}
+    </main>
+ 
+    <style>
+        .navbar {
+            padding:20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            background-color: white;
+        }
+
+        .nav-item {
+            padding: 3px 40px;
+        }
+    </style>
+</body>
+</html>

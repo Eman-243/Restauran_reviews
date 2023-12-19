@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+ 
+
+  .wrapper{
+    background-size: cover;
+    height:100vh;
+    background-color: white ;
+
+  }
+  
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding:40px;
+    background: #606c38;
+    background-image: url('/static/reviewsyetem/img/background2.jpg');
+    box-sizing: border-box;
+    box-shadow: 0 15 25 rgba(0,0,0,.5);
+    border-radius: 10px;
+  }
+
+  .box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-family: "Georgia", Times, serif;
+  }
+
+  .box .inputBox {
+    position: relative;
+    background-color: transparent !important;
+
+  }
+
+  .box .inputBox input{
+    width: 100%;
+    padding: 10 0;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border:none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: transparent !important;
+
+    background: transparent !important;
+  }
+
+  .box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .box .inputBox input:focus ~ label,
+  .box .inputBox input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+  }
+
+  .box #submit {
+    position: relative;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fefae0;
+    color: black;
+    border-radius: 20px;
+
+
+}
