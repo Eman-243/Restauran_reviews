@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "656cc43f26cc096701088279"
+  },
+  "id": 3,
+  "password": "pbkdf2_sha256$260000$5xuD3QkCQHNvHxMm8bZu32$8gSFuyCKW9D/6VueM1PzT2o54w+wQ/jPKX+ZoO0jGAo=",
+  "last_login": {
+    "$date": "2023-12-19T17:24:26.867Z"
+  },
+  "is_superuser": true,
+  "username": "Eman243",
+  "first_name": "Eman",
+  "last_name": "Nayel",
+  "email": "Eman243@gmail.com",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": {
+    "$date": "2023-12-03T18:09:02.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "656d820586aeaac4a61195cc"
+  },
+  "id": 4,
+  "password": "pbkdf2_sha256$260000$CU0qYUwebju9dUcKI9OLfZ$uKY51T/ttYpSHMoKhUPrvl5XKQbpVoMn2EZtxKrjDAg=",
+  "last_login": {
+    "$date": "2023-12-05T13:04:16.105Z"
+  },
+  "is_superuser": false,
+  "username": "Nosa",
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": {
+    "$date": "2023-12-04T07:38:45.016Z"
+  }
+}]
